@@ -1,6 +1,8 @@
     import React from 'react';
-    import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+    import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
     import Sobre from './sobre';
+    import GOGO from './image 3.png';
+    import image from './image6.png';
      
     export default function App() {
         const [page, setPage] = React.useState('home');
@@ -9,9 +11,15 @@
             if (page === 'home') {
                 return (
                     <View style={styles.container}>
-                        <Text style={styles.title}> Página Principal </Text>
-                        <Image source={require('../assets/images/imagem2.png')} style={styles.image} />
-                        <Text style={styles.title}> Exemplo 1</Text>
+                        <Text style={styles.title}>  </Text>
+
+                        <view style={styles.imag}>
+                        <Image source={image}/>
+                        </view>
+                       
+                        <Image source={GOGO}/>
+                        
+                        <Text style={styles.title}></Text>
                         <TouchableOpacity style={styles.button} onPress={() => setPage('sobre')}>
                             <Text style={styles.buttonText }> Entrar </Text>
                         </TouchableOpacity>
@@ -26,11 +34,12 @@
     }
         const styles = StyleSheet.create({
             container: {
+                height: 950,
                 
-                flex: 1,
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: 'black',
+                
             },
             title: {
                 
@@ -43,11 +52,18 @@
                 backgroundColor: '#007BFF',
                 padding: 10,
                 borderRadius: 5,
-                width: 300,
+                
+                width: 400,
             },
             buttonText: {
                 color: '#FFFFFF',
                 fontSize: 16,
                 textAlign: 'center',
+            }, imag: {
+                paddingBottom: 200,
+                fontSize: 24,
+                fontWeight: 'bold',
+                color: '#fff',
+                marginBottom: 20,    
             },
         });
