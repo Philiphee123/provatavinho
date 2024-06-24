@@ -18,7 +18,7 @@ export default function App() {
                     <Text style={styles.title}> longetude 0.00</Text>  
                     <Text style={styles.title}>____________________________________</Text>             
                     <TouchableOpacity style={styles.button} onPress={() => setPage('home')}>
-                        <Text style={styles.buttonText }> Voltar </Text>
+                        <Text style={styles.buttonText }> ver minha localização </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button1} onPress={() => setPage('home')}>
                         <Text style={styles.buttonText1 }> Voltar </Text>
